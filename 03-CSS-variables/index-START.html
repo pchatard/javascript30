@@ -40,6 +40,11 @@
 			/*
                 misc styles, nothing to do with CSS variables
             */
+            :root {
+                --spacing: 10px;
+                --blur: 10px;
+                --color: #ffc600;
+            }
 
 			body {
 				text-align: center;
@@ -52,11 +57,21 @@
 
 			.controls {
 				margin-bottom: 50px;
-			}
+            }
+            
+            .hl {
+                color: var(--color);
+            }
 
 			input {
 				width: 100px;
-			}
+            }
+            
+            img {
+                background-color: var(--color);
+                padding: var(--spacing);
+                filter: blur(var(--blur));
+            }
         </style>
         
         <script src="index.js"></script>
