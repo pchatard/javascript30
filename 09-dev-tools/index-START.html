@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Console Tricks!</title>
+	</head>
+	<body>
+		<p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+		<script>
+			const dogs = [
+				{ name: "Snickers", age: 2 },
+				{ name: "hugo", age: 8 },
+			];
+
+			function makeGreen() {
+				const p = document.querySelector("p");
+				p.style.color = "#BADA55";
+				p.style.fontSize = "50px";
+			}
+
+            // Regular
+            console.log('Hello');
+
+            // Interpolated
+            console.log('Hello, I am a %s string', 'panda');
+
+            // Styled
+            console.log('%cI am some styled text', 'font-size: 20px');
+
+            // warning!
+            console.warn('Careful');
+
+            // Error :|
+            console.error('Bad code');
+
+            // Info
+            console.info('I can help you');
+
+            // Testing
+            console.assert(2 === 1, 'That is wrong');
+            console.assert(1 === 1, 'That is true');
+
+            // clearing
+            // console.clear();
+
+            // Viewing DOM Elements
+            const p = document.querySelector('p');
+            console.dir(p);
+
+            // Grouping together
+            console.group('Tests');
+            console.log('Test1', 'Test2');
+            console.log('Test3', 'Test4');
+            console.groupEnd();
+
+            // counting
+            console.count('A')
+            console.count('A')
+            console.count('A')
+            console.count('A')
+            console.count('A')
+
+            // timing
+            console.time('start');
+            setTimeout(() => {console.timeEnd('start');}, 2000);
+            
+		</script>
+	</body>
+</html>
